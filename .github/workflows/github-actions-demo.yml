@@ -41,4 +41,4 @@ jobs:
           password: 27sGsei_fcjT
           target-directory: /home/dymyrzzzcom/the.vdymyr.pp.ua
 	local-path: |
-            ${{ github.workspace }}./
+            ${{ github.workspace }}
