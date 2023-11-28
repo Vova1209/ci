@@ -1,4 +1,3 @@
-
 name: GitHub Actions Demo
 on:
   push:
@@ -10,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-varsion: [ 17.x ]
+        node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -33,11 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: init
     steps:
-	- name: SSH upload
+      - name: SSH upload
         uses: appleboy/ssh-action@v2
         with:
           host: 91.223.223.132
           username: dymyrzzzcom
           password: 27sGsei_fcjT
           target-directory: /home/dymyrzzzcom/the.vdymyr.pp.ua
-	local-path: ${{ github.workspace }}
+          local-path: .
