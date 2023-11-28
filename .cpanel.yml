@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dymyrzzzcom/the.vdymyr.pp.ua
+    - /bin/cp -R images $DEPLOYPATH
