@@ -28,15 +28,3 @@ jobs:
         run: npm run test:e2e
       - name: lint code
         run: npm run lint
-  deploy:
-    runs-on: ubuntu-latest
-    needs: init
-    steps:
-      - name: SSH upload
-        uses: appleboy/ssh-action@v2
-        with:
-          host: 91.223.223.132
-          username: dymyrzzzcom
-          password: 27sGsei_fcjT
-          target-directory: /home/dymyrzzzcom/the.vdymyr.pp.ua
-          local-path: .
